@@ -1,0 +1,19 @@
+button {
+    border-radius: 100%;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background-color: coral;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+p {
+    font-weight: 700;
+    font-size: 30px;
+    color: coral;
+}
+
+#div-central {
+    display: flex;
+}

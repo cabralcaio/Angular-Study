@@ -15,6 +15,7 @@ export class AppComponent {
   n1: number = 300
   n2: number = 500
   tipoInput: string = "text"
+  count: number = 1;
 
   somar(x: number, y: number) {
     return x + y
@@ -27,4 +28,17 @@ export class AppComponent {
       this.tipoInput = "password"
     }
   }
+
+  mais() {
+    this.count = this.count + 1
+    return this.count
+  }
+  menos() {
+    if (this.count <= 0) {
+      return this.count
+    }
+    this.count = this.count - 1
+    return this.count
+  }
+
 }
