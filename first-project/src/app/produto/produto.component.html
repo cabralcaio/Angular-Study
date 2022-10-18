@@ -5,6 +5,11 @@
     <h2>Garnier</h2>
     <p>Descrição produto Lorem ipsum dolor sit.</p>
     <p id="valor-produto">$60</p>
+    <div id="div-central">
+        <button class="count" (click)="mais()">+</button>
+        <p id="countp">{{count}}</p>
+        <button class="count" (click)="menos()">-</button>
+      </div>
     <img src="./assets/estrelas.png" alt="avaliação" width="60"> <br>
     <button>ADD TO CART</button>
 </div>

@@ -7,5 +7,16 @@ import { Component } from "@angular/core";
     styleUrls: ["./produto.component.css"]
 })
 export class ProdutoComponent {
-
+    count: number = 1;
+    mais() {
+        this.count = this.count + 1
+        return this.count
+      }
+      menos() {
+        if (this.count <= 0) {
+          return this.count
+        }
+        this.count = this.count - 1
+        return this.count
+      }
 }

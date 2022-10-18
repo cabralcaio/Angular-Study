@@ -1,0 +1,25 @@
+#all-card {
+    margin-top: 20px;
+    width: 370px;
+    height: 200px;
+    background-color: rgb(215, 215, 215);
+    border-radius: 5px;
+    padding-top: 30px;
+}
+
+#black-div {
+    height: 45px;
+    width: 100%;
+    background-color: black;
+}
+
+#grey-div {
+    height: 30px;
+    background-color: rgb(174, 174, 174);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#card-cv {
+    color: rgb(215, 215, 215);
+    font-weight: 700;
+}

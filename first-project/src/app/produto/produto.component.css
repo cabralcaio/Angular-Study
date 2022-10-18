@@ -37,3 +37,23 @@ button {
 h2 {
     margin-top: 50px;
 }
+
+.count {
+    border-radius: 50%;
+    border: none;
+    width: 15px;
+    height: 15px;
+    background-color: orange;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#countp {
+    font-weight: 700;
+    font-size: 15px;
+    color: orange;
+}
+
+#div-central {
+    display: flex;
+}
