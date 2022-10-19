@@ -1,12 +1,12 @@
 <div id="all-card">
     <img src="./assets/bandeira-master.png" alt="bandeira do cartão" width="100px">
-    <p id="card-number">51515151515151</p>
+    <p id="card-number">{{dadosCartao.numero || "1234 4567 7891 0123"}}</p>
     <div id="mid-card">
         <div id="div-name">
-            <p id="card-name">CAIO CABRAL</p>
+            <p id="card-name">{{dadosCartao.nome || "SEU NOME AQUI"}}</p>
         </div>
         <div id="div-date">
-            <p id="card-date">05/45</p>
+            <p id="card-date">{{dadosCartao.mes || "01"}}/{{dadosCartao.ano || "22"}}</p>
         </div>
     </div>
 </div>

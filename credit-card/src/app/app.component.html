@@ -1,24 +1,23 @@
 <div class="all-content">
     <div id="cards">
-        <app-front-card></app-front-card>
+        <app-front-card [dadosCartao]="formCartaoDeCredito"></app-front-card>
         <app-back-card></app-back-card>
     </div>
     <div id="forms">
         <div id="all-form">
             <label for="card-name">Nome do Cartão</label>
-            <input type="text" name="card-name" id="card-name">
+            <input type="text" name="card-name" id="card-name" [(ngModel)]="formCartaoDeCredito.nome">
         
             <label for="card-number">Número do Cartão</label>
-            <input type="number" name="card-number" id="card-number" [(ngModel)]="n1">
+            <input type="text" name="card-number" maxlength="19" id="card-number" [(ngModel)]="formCartaoDeCredito.numero">
             <div id="mid-form">
                 <label for="expiration">Expiração</label>
-                <input type="number" name="expiration" id="card-month">
-                <input type="number" name="expiration" id="card-year">
-                <label for="card-cv">CV</label>
-                <input type="number" id="card-cv">
+                <input type="text" maxlength="2" name="expiration" id="card-month" [(ngModel)]="formCartaoDeCredito.mes">
+                <input type="text" maxlength="2" name="expiration" id="card-year" [(ngModel)]="formCartaoDeCredito.ano">
+                <label for="card-cv" id="label-cvv">CVV</label>
+                <input type="text" id="card-cv" maxlength="3" [(ngModel)]="formCartaoDeCredito.cv">
             </div>
             <button>Confirmar</button>
-            <p>teste {{n1}}</p>
         </div>
     </div>
 </div>

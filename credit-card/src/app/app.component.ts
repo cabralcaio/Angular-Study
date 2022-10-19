@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CartaoDeCredito } from './interfaces/CartaoDeCredito';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'credit-card';
+  formCartaoDeCredito: CartaoDeCredito = {
+    ano: "",
+    cv: "",
+    mes: "",
+    nome: "",
+    numero: ""
+  }
 
   @Input()
   n1: number = 300
