@@ -7,7 +7,7 @@
 }
 
 #card-number {
-    margin-top: 80px;
+    margin-top: 50px;
     font-weight: 900;
     margin-bottom: -1px;
     font-size: 20px;
@@ -32,3 +32,6 @@ margin-right: 10px;
     display: flex;
     width: 80%;
     }
+#chip {
+    padding-left: 250px;
+}
