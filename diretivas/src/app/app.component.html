@@ -36,6 +36,6 @@
     <!-- <produto-card [prod]="p"></produto-card> -->
     <!-- ngFor -->
     <!-- Serve para percorrer listas dentro do HTML do seu componente -->
-    <produto-card *ngFor="let produto of produtos" [prod]="produto" ></produto-card>
+    <produto-card *ngFor="let produto of produtos" [prod]="produto" (deletar)="deletarProduto($event)"></produto-card>
   </section>
 </main>

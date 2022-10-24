@@ -14,15 +14,15 @@ export class AppComponent {
   estoque: number = 0
   descricao: string = ''
 
-  @Output()
   produtos: Produto[] = []
 
   excluirProduto() {
     console.log("exclui o produto")
   }
 
-  onCallArray(){
-    this.excluirProduto();
+  deletarProduto(p: Produto): void{
+    const index = this.produtos.indexOf(p)
+    this.produtos.splice(index, 1)
   }
 
   adicionarProduto(evento: any): void {

@@ -24,11 +24,13 @@ export class ProdutoCardComponent implements OnInit {
   }
 
   @Output()
+  deletar: EventEmitter<Produto> = new EventEmitter<Produto>()
+
+  @Output()
   callArray = new EventEmitter();
 
-  chamarEvento (){
-    let teste1: String = "testee1"
-    this.callArray.emit(null)
+  emitirEventoDeletar (): void{
+    this.deletar.emit(this.prod)
   }
 
   constructor() { }
