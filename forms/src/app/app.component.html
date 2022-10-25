@@ -1,0 +1,61 @@
+<div class="flex">
+  <mat-card class="card-form">
+    <mat-card-title>Cadastro de Usuários</mat-card-title>
+    <mat-card-content>
+
+      <!-- Informar que o formulário será validado pelo template driven forms -->
+      <!-- ngForm informa que o formulario utilizara o metodo de validacao do template driven forms -->
+      <form action="#" #userForm="ngForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input 
+            type="text" 
+            name="nome" 
+            matInput 
+            [(ngModel)]="dadosUsuario.nome"
+            required
+            minlength="3"
+            #inputNome="ngModel">
+            <mat-error>Digite um nome com pelo menos 3 caracteres</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Sobrenome</mat-label>
+          <input type="text"
+            matInput 
+            name="sobrenome" 
+            matInput 
+            [(ngModel)]="dadosUsuario.sobrenome"
+            minlength="3"
+            #inputSobrenome="ngModel"
+            required>
+            <mat-error>Digite um sobrenome com pelo menos 3 caracteres</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input type="email"
+            matInput 
+            name="email" 
+            matInput 
+            [(ngModel)]="dadosUsuario.email"
+            #inputEmail="ngModel"
+            required>
+            <mat-error>Digite um E-mail válido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input type="password"
+            matInput 
+            name="senha" 
+            matInput 
+            [(ngModel)]="dadosUsuario.senha"
+            minlength="8"
+            #inputSobrenome="ngModel"
+            required>
+            <mat-error>Digite uma senha com pelo menos 8 caracteres</mat-error>
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Cadastrar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
