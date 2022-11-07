@@ -1,4 +1,4 @@
 export interface FilmeRepo {
-    titulo: string
+    title: string
     sinopse: string
 }
