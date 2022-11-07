@@ -9,10 +9,8 @@ import { FilmeAPIService } from './services/filme-api.service';
 export class AppComponent {
   [x: string]: any;
   title = 'Filme-API';
-  readonly apiURL : string;
 
   constructor(private filmeService: FilmeAPIService) {
-    this.apiURL = "https://api.themoviedb.org/3/movie/550?api_key=328bda88946184d02e2280add99ac82a"
   }
 
   listarFilme() {
