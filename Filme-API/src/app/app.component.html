@@ -1,2 +1,19 @@
-<button (click)="listarFilme()">GET</button>
-<h1>{{this.gFilme?.title}}</h1>
+<main class="container">
+    <section class="search">
+      <form action="#" [formGroup]="githubForm" id="search-form" (ngSubmit)="listarFilme()">
+        <mat-form-field appearance="outline">
+          <mat-label>Nome do filme</mat-label>
+          <input type="text" matInput placeholder="Ex: A culpa é das estrelas" formControlName="filmeName">
+        </mat-form-field>
+        <button mat-flat-button color="accent">
+          <mat-icon>search</mat-icon>
+        </button>
+      </form>
+      <!-- <img *ngIf="gUser != undefined" [src]="gUser.avatar_url"> -->
+      <div *ngFor="let item of this.array1; let i = index" [attr.data-index]="i">
+        <h2>{{array1[i].title}}</h2>
+        <p>{{array1[i].overview}}</p>
+      </div>
+    
+    </section>
+  </main>

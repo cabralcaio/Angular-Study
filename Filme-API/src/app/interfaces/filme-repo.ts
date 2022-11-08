@@ -1,4 +1,5 @@
+import { Caracteristicas } from "./caracteristicas";
+
 export interface FilmeRepo {
-    title: string
-    sinopse: string
+    "results": Caracteristicas[]
 }
