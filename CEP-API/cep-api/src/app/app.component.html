@@ -1,12 +1,12 @@
 <main class="container">
   <section class="search">
     <img src="/assets/correios.jpg" alt="Correios" width="250px">
-    <form action="#" id="search-form">
+    <form action="#" id="search-form" (ngSubmit)="pesquisaCep()">
       <mat-form-field appearance="outline">
         <mat-label>CEP</mat-label>
-        <input type="text" matInput placeholder="Ex: 85520-607" formControlName="username">
+        <input type="text" matInput placeholder="Ex: 85520-607" >
       </mat-form-field>
-      <button mat-flat-button color="accent">
+      <button mat-flat-button color="accent" type="submit">
         <mat-icon>search</mat-icon>
       </button>
     </form>

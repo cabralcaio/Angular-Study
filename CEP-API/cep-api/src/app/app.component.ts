@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Endereco } from './interface/endereco';
+import { ApiCepService } from './Service/api-cep.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cep-api';
+
+  endereco!: Endereco
+  numeroCep: string = ""
+
+  constructor(
+    private APIcep: ApiCepService
+  ) {}
+
+  pesquisaCep () {
+    console.log("pesquisei")
+    this.APIcep.buscarCep().subscribe(
+      (enderecoPesquisado) => {
+        this.endereco = enderecoPesquisado
+        console.log(enderecoPesquisado)
+      }
+    )
+  }
+
 }
