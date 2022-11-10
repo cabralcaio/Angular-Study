@@ -17,6 +17,8 @@ export class ProdutoComponent implements OnInit {
 
   produto!: Produto
 
+  produtoEncontrado: boolean = true
+
   produtoForm: FormGroup = new FormGroup({
     descricao: new FormControl('', [ Validators.required ]),
     foto: new FormControl(''),
@@ -47,6 +49,9 @@ export class ProdutoComponent implements OnInit {
           foto: prod.foto,
           preco: prod.preco
         })
+      },
+      (error) => {
+        this.produtoEncontrado = false
       }
     )
   }
