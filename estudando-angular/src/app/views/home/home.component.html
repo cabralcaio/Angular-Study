@@ -2,5 +2,9 @@
 <!-- Interpolation -->
 <h1>Bem vindo(a), {{user}}!</h1>
 <!-- Property binding -->
-<img [src]="image.src" [alt]="image.alt">
+<img [src]="image.src" [alt]="image.alt"><br>
+<!-- One Way Data Binding -->
+<button (click)="clicar()">Clique aqui</button><br>
+<!-- Two Way Data Binding -->
+<input type="text" placeholder="Digite seu nome" [(ngModel)]="user">
 <app-footer></app-footer>

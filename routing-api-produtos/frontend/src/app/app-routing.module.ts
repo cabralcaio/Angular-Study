@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 // iniciar o roteamento
 // importar o módulo de roteamento
 import { RouterModule, Routes } from "@angular/router";
+import { TestarNumeroGuard } from "./guards/testar-numero.guard";
 import { CadastroComponent } from "./pages/cadastro/cadastro.component";
 import { Error404Component } from "./pages/error404/error404.component";
 import { ListarProdutosComponent } from "./pages/listar-produtos/listar-produtos.component";
@@ -35,7 +36,10 @@ const rotas: Routes = [
   },
   { 
     path: 'produtos/:idProduto', // rota com o parâmetro idProduto
-    component: ProdutoComponent
+    component: ProdutoComponent,
+    canActivate: [
+      TestarNumeroGuard
+    ]
   },
   {
     path: '**', // ** significa que qualquer busca no link não identificada leva ao componente de erro

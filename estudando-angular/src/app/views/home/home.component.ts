@@ -16,4 +16,9 @@ export class HomeComponent {
     alt: "Foto de perfil Caio"
   }
 
+  public clicar(): void {
+    alert("Clicou!");
+  }
+
+
 }
