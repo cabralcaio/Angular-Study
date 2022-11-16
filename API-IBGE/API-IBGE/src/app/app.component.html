@@ -1,0 +1,34 @@
+<app-header></app-header>
+<main>
+  <h1>Cadastre um novo ponto de vendas</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Estado</mat-label>
+    <mat-select class="form-control" type="string" >
+      <mat-option *ngFor="let item of arrayUf" [value]="item" (onSelectionChange)="pesquisaCidade(item)">{{item}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Cidade</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let item of arrayCidades" [value]="item">{{item}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ponto de venda</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Começa as</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Termina as</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <button (click)="pesquisaCep()">pesquisar</button>
+  <!-- <button (click)="pesquisaCidade(thi)">pesquisar2</button> -->
+</main>
