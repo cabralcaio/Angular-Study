@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Endereco } from './interface/endereco';
 import { Estados } from './interface/estados';
 import { ApiCepService } from './Service/api-cep.service';
@@ -8,7 +8,7 @@ import { ApiCepService } from './Service/api-cep.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'cep-api';
 
   endereco!: Endereco
@@ -25,7 +25,9 @@ export class AppComponent {
     private APIcep: ApiCepService
   ) {}
 
-  pesquisaCep () {
+  
+
+  pesquisaCep (): void {
     console.log("pesquisei")
     this.APIcep.buscarCep().subscribe(
       (enderecoPesquisado) => {
@@ -40,7 +42,12 @@ export class AppComponent {
 
   }
 
-  pesquisaCidade (uf: any) {
+  ngOnInit(): void { // é chamado quando o componente foi colocado na tela (renderizado)
+    this.pesquisaCep()
+    this.pesquisaCep()
+      }
+
+  pesquisaCidade (uf: any): void {
     console.log("pesquisei cidade" + uf)
     this.APIcep.buscarCidade(uf).subscribe(
       (cidadePesquisada) => {
